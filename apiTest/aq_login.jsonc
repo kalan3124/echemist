@@ -1,0 +1,24 @@
+{
+    "url":"user/login",
+    "request":{
+        "body":{
+            "username": "{{username}}",
+            "password": "23456789"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "token": "{{token: string}}",
+            "user": {
+                "name": "{{string}}",
+                "id": "{{number}}",
+                "email": "updated@ceylonlinux.lk",
+                "profileCompleted": true,
+                "supplierCompleted": true,
+                "nextOrderIncrement": 2
+            }
+        },
+        "status": 200
+    }
+}

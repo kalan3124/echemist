@@ -1,0 +1,27 @@
+{
+    "url":"user/signup",
+    "request":{
+        "body":{
+            "mobileNumber": "0719032181",
+            "email": "ramesh@ceylonlinux.lk",
+            "username": "{{username}}",
+            "password": "{{password}}",
+            "confirmPassword": "{{password}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "token": "{{token: string}}",
+            "user": {
+                "name": "{{string}}",
+                "id": "{{number}}",
+                "email": "ramesh@ceylonlinux.lk",
+                "profileCompleted": false,
+                "supplierCompleted": false,
+                "nextOrderIncrement": 1
+            }
+        },
+        "status": 200
+    }
+}

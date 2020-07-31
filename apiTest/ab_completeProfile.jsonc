@@ -1,0 +1,22 @@
+{
+    "url":"profile/complete",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        },
+        "body":{
+            "shopName": "Ramesh Shop",
+            "shopAddress": "Matugama, Sri Lanka.",
+            "city":{
+                "id":1
+            }
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "message": "{{string}}"
+        },
+        "status": 200
+    }
+}

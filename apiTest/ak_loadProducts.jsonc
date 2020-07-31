@@ -1,0 +1,28 @@
+{
+    "url":"products/load",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "categories": [
+                {
+                    "id": "{{number}}",
+                    "name": "{{string}}",
+                    "supplierId": "{{number}}",
+                    "products": [
+                        {
+                            "id": "{{number}}",
+                            "name": "{{string}}",
+                            "supplierId": "{{number}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "status": 200
+    }
+}

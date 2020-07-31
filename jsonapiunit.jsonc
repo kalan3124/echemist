@@ -1,0 +1,20 @@
+{
+    "baseUrl":"http://127.0.0.1:8001/api/shop/v1/",
+    "preVariables": {
+        "username": "testshop",
+        "password": "12345678"
+    },
+    "default": {
+        "method":"POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    },
+    "files":"apiTest/*.jsonc"//,
+    // "proxy": {
+    //     "uri": "proxy uri",
+    //     "username": "username",
+    //     "password": "password"
+    // }
+}

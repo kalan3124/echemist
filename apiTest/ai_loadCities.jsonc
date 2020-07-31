@@ -1,0 +1,24 @@
+{
+    "url":"areas/cities",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        },
+        "body": {
+            "districtId": 1
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "cities": [
+                {
+                    "id": "{{number}}",
+                    "name": "{{string}}",
+                    "districtId": "{{number}}"
+                }
+            ]
+        },
+        "status": 200
+    }
+}

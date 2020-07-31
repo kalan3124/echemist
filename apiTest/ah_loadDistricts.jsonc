@@ -1,0 +1,24 @@
+{
+    "url":"areas/districts",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        },
+        "body": {
+            "provinceId": 1
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "districts": [
+                {
+                    "id": "{{number}}",
+                    "name": "{{string}}",
+                    "provinceId": "{{number}}"
+                }
+            ]
+        },
+        "status": 200
+    }
+}

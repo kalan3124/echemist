@@ -1,0 +1,18 @@
+{
+    "url":"suppliers/save",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        },
+        "body": {
+            "checked":[1,2]
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "message": "{{string}}"
+        },
+        "status": 200
+    }
+}

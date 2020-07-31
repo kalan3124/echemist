@@ -1,0 +1,33 @@
+{
+    "url":"profile/load",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "profile": {
+                "image": "{{null|string}}",
+                "shopName": "UpdatedShop",
+                "shopAddress": "UpdatedAddress",
+                "province": {
+                    "id": 1,
+                    "name": "{{string}}"
+                },
+                "district": {
+                    "id": 1,
+                    "name": "{{string}}"
+                },
+                "city": {
+                    "id": 1,
+                    "name": "{{string}}"
+                },
+                "mobileNumber": "0710000000",
+                "email": "updated@ceylonlinux.lk"
+            }
+        },
+        "status": 200
+    }
+}

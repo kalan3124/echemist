@@ -1,0 +1,22 @@
+{
+    "url":"user/status",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "user": {
+                "name": "{{string}}",
+                "id": "{{number}}",
+                "email": "ramesh@ceylonlinux.lk",
+                "profileCompleted": true,
+                "supplierCompleted": true,
+                "nextOrderIncrement": 1
+            }
+        },
+        "status": 200
+    }
+}

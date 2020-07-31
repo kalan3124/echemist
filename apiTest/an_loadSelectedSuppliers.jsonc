@@ -1,0 +1,21 @@
+{
+    "url":"suppliers/selected",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "suppliers": [
+                {
+                    "id": "{{number}}",
+                    "name": "{{string}}",
+                    "image": "{{string|null}}"
+                }
+            ]
+        },
+        "status": 200
+    }
+}

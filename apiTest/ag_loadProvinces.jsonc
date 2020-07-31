@@ -1,0 +1,20 @@
+{
+    "url":"areas/provinces",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "provinces": [
+                {
+                    "id": "{{number}}",
+                    "name": "{{string}}"
+                }
+            ]
+        },
+        "status": 200
+    }
+}

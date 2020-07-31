@@ -1,0 +1,46 @@
+#!/bin/sh
+
+echo "INFO: Validating PHPCS."
+
+# Check for phpcs
+which ./vendor/bin/phpcs &> /dev/null
+if [[ "$?" == 1 ]]; then
+  echo "ERROR: Please install PHPCS. Run `composer require squizlabs/php_codesniffer --dev` to install."
+  exit 1
+fi
+
+
+./vendor/bin/phpcs
+
+if [[ "$?" != 0 ]]; then
+echo "ERROR: Failed PHPCS. Run `./vendor/bin/phpcbf` to fix auto fixable errors."
+exit 1
+else
+echo "INFO: Passed PHPCS"
+fi
+
+
+
+echo "INFO: Validating JSONAPIUnit"
+
+# Check for jsonapiunit
+which jsonapiunit &> /dev/null
+if [[ "$?" == 1 ]]; then
+  echo "ERROR: Please install JSONAPIUnit. Visit https://github.com/whizsid/jsonapiunit#installation for installation guides."
+  exit 1
+fi
+sh -c 'php artisan serve --port="8001"  & wait' &
+sleep 3
+
+jsonapiunit
+passed="$?"
+kill $(pgrep -f "php -S(.*)$PWD/server.php")
+if [[ $passed != 0 ]]; then
+echo "ERROR: Failed JSONAPIUnit."
+exit 1
+else
+echo "INFO: Passed JSONAPIUnit"
+fi
+
+
+exit 0

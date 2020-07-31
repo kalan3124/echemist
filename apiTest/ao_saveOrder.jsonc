@@ -1,0 +1,29 @@
+{
+    "url":"orders/save",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        },
+        "body": {
+            "order": {
+                "number": "SO/TEST/000001",
+                "time": 1587142873586,
+                "lines": [
+                    {
+                        "product": {
+                            "id": 1
+                        },
+                        "qty": 12
+                    }
+                ]
+            }
+        }
+    },
+    "response": {
+        "body":{
+            "success":true,
+            "message": "{{string}}"
+        },
+        "status": 200
+    }
+}

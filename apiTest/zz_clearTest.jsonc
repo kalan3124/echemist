@@ -1,0 +1,14 @@
+{
+    "url":"test/clear",
+    "request":{
+        "headers":{
+            "Authorization": "Bearer {{token}}"
+        }
+    },
+    "response": {
+        "body":{
+            "success":true
+        },
+        "status": 200
+    }
+}
